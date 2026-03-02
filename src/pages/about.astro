@@ -1,0 +1,80 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Button from '../components/Button.astro';
+---
+
+<PageLayout
+  title="About"
+  description="Joey Padden — 20+ years in wireless, 50 patents, startup founder, and builder. The story behind Maxwell's Wireless."
+  heading="About"
+  subheading="The story behind two decades of building in wireless."
+>
+  <div class="prose prose-lg max-w-none">
+    <p>
+      I've spent 20+ years in wireless — from grad school research on WiFi QoS to
+      co-founding FreedomFi, the company that brought CBRS small cells to the
+      Helium network. It was acquired by Nova Labs in 2022.
+    </p>
+
+    <p>
+      Along the way, I've been granted 50 U.S. patents, led 3GPP standardization at
+      CableLabs, and helped build the Helium network from the inside as VP of
+      Network Architecture. I've published research, spoken at industry conferences
+      around the world, and contributed to standards bodies that shape how wireless
+      networks work.
+    </p>
+
+    <h2>What Drives Me</h2>
+
+    <p>
+      Curiosity. That's the through line across every role, every company, every patent.
+      I'm drawn to hard problems — the kind where you have to understand the physics,
+      the protocol, the economics, and the human experience to find a real solution.
+    </p>
+
+    <p>
+      I started by understanding signals. Then I learned to build systems around them.
+      Then teams. Then companies. Each chapter built on the last, and the problems
+      kept getting more interesting.
+    </p>
+
+    <h2>The Current Chapter</h2>
+
+    <p>
+      Right now, I'm exploring the intersection of AI and telecom. At Helium, I'm
+      leading a years-long WBA project to instrument Wi-Fi networks with quality metrics
+      that enable operators to make user-experience-driven decisions about Wi-Fi
+      network access. We're building Claude-friendly MCP interfaces to give AI access
+      to network data for analysis and, eventually, operational decision-making.
+    </p>
+
+    <p>
+      I'm also building software independently. When AI coding tools like Claude
+      arrived, I realized for the first time I could build the things I envision
+      without depending on a software team. After two decades of architecting
+      networks, I wanted to architect software too.
+    </p>
+
+    <p>
+      The VoiceMail app is a perfect example — my dad is losing his eyesight, and
+      every voice-reader email app has terrible UX. So I'm building something he
+      can actually use. Email is his connection to friends and community. It's also
+      a deliberate way to stay hands-on with AI tools — the best way to understand
+      them is to build something real.
+    </p>
+
+    <h2>The Name</h2>
+
+    <p>
+      Maxwell's Wireless is a nod to James Clerk Maxwell — the physicist who unified
+      electricity and magnetism into electromagnetic theory. Without his equations,
+      there's no wireless anything. It felt right to name this after the person
+      who started it all.
+    </p>
+  </div>
+
+  <div class="mt-12 flex gap-4">
+    <Button href="/experience">View Experience</Button>
+    <Button href="/contact" variant="outline">Get in Touch</Button>
+  </div>
+</PageLayout>

@@ -1,0 +1,39 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  date: string;
+  tags?: string[];
+}
+
+const { title, description, date, tags } = Astro.props;
+const formattedDate = new Date(date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={`${title} | Insights`} description={description}>
+  <article class="max-w-content mx-auto px-6 py-16 md:py-24">
+    <header class="mb-12">
+      <a href="/insights" class="text-accent hover:underline text-sm font-medium">&larr; Back to Insights</a>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-secondary mt-4">{title}</h1>
+      <div class="mt-4 flex items-center gap-4 text-sm text-foreground/60">
+        <time datetime={date}>{formattedDate}</time>
+        {tags && tags.length > 0 && (
+          <div class="flex gap-2">
+            {tags.map((tag) => (
+              <span class="bg-primary/20 text-secondary px-2 py-0.5 rounded text-xs font-medium">{tag}</span>
+            ))}
+          </div>
+        )}
+      </div>
+    </header>
+    <div class="prose prose-lg max-w-none">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,45 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<PageLayout
+  title="Contact"
+  description="Get in touch with Joey Padden — let's talk wireless, telecom, startups, or whatever you're building."
+  heading="Get in Touch"
+  subheading="Have a question, an idea, or just want to connect? I'd love to hear from you."
+>
+  <div class="grid md:grid-cols-2 gap-12">
+    <div>
+      <ContactForm />
+    </div>
+    <div class="space-y-8">
+      <div>
+        <h3 class="text-lg font-bold text-secondary mb-2">Connect on LinkedIn</h3>
+        <a
+          href="https://www.linkedin.com/in/joey-padden-22a69a3/"
+          target="_blank"
+          rel="noopener"
+          class="text-accent hover:underline font-medium"
+        >
+          linkedin.com/in/joey-padden
+        </a>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold text-secondary mb-2">Based in</h3>
+        <p class="text-foreground/70">Boulder, Colorado</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold text-secondary mb-2">What I'm interested in</h3>
+        <ul class="space-y-2 text-foreground/70">
+          <li>AI + telecom infrastructure</li>
+          <li>Wireless network architecture</li>
+          <li>Decentralized telecom & blockchain</li>
+          <li>MVNO strategy & operations</li>
+          <li>Startup building & leadership</li>
+          <li>Standards body collaboration</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</PageLayout>

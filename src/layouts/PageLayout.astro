@@ -1,0 +1,24 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  heading?: string;
+  subheading?: string;
+}
+
+const { title, description, heading, subheading } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="max-w-content mx-auto px-6 py-16 md:py-24">
+    {heading && (
+      <div class="mb-12">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-secondary">{heading}</h1>
+        {subheading && <p class="mt-4 text-lg text-foreground/70 max-w-2xl">{subheading}</p>}
+      </div>
+    )}
+    <slot />
+  </section>
+</BaseLayout>

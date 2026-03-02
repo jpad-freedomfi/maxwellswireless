@@ -1,0 +1,23 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import projects from '../data/projects.json';
+---
+
+<PageLayout
+  title="Projects"
+  description="FreedomFi, Helium Network, VoiceMail app, CableLabs research, and standards contributions — the projects that define Joey Padden's career."
+  heading="Projects"
+  subheading="From startups to standards bodies — the things I've built and contributed to."
+>
+  <div class="grid md:grid-cols-2 gap-6">
+    {projects.map((project) => (
+      <ProjectCard
+        title={project.title}
+        period={project.period}
+        description={project.description}
+        tags={project.tags}
+      />
+    ))}
+  </div>
+</PageLayout>

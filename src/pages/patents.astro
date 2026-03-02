@@ -1,0 +1,131 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Badge from '../components/Badge.astro';
+import { getCollection } from 'astro:content';
+
+const allPatents = await getCollection('patents');
+
+// Separate grants and pending
+const grants = allPatents.filter((p) => p.data.type === 'grant');
+const pending = allPatents.filter((p) => p.data.type === 'pending');
+
+// Group grants by topic
+const topicGroups = new Map<string, { label: string; patents: typeof grants }>();
+for (const patent of grants) {
+  const key = patent.data.topic;
+  if (!topicGroups.has(key)) {
+    topicGroups.set(key, { label: patent.data.topicLabel, patents: [] });
+  }
+  topicGroups.get(key)!.patents.push(patent);
+}
+
+// Sort groups by number of patents (descending)
+const sortedGroups = [...topicGroups.entries()].sort((a, b) => b[1].patents.length - a[1].patents.length);
+
+// Topic labels for pending
+const pendingTopicLabels: Record<string, string> = {
+  'blockchain-settlement': 'Blockchain Settlement Interfaces',
+  'blockchain-hotspot': 'Mobile Hotspot via Blockchain',
+  'mvno-optimizer': 'Automated MVNO Cost Optimization',
+  'network-discovery': 'Secure Network Discovery & Mapping',
+  'blockchain-security': 'Blockchain Account Security',
+};
+---
+
+<PageLayout
+  title="Patents"
+  description="Browse Joey Padden's 50 granted U.S. patents and 5 pending applications, organized by topic — from MIMO and vRAN to blockchain-telecom convergence."
+  heading="Patent Portfolio"
+  subheading="50 granted U.S. patents + 5 pending applications, spanning two decades of wireless innovation."
+>
+  <!-- Stats -->
+  <div class="flex flex-wrap gap-6 mb-12">
+    <div class="flex items-center gap-3 px-5 py-3 bg-white rounded-xl border border-primary/20 shadow-sm">
+      <span class="text-3xl font-extrabold text-accent">{grants.length}</span>
+      <span class="text-sm font-medium text-foreground/60">Granted Patents</span>
+    </div>
+    <div class="flex items-center gap-3 px-5 py-3 bg-white rounded-xl border border-primary/20 shadow-sm">
+      <span class="text-3xl font-extrabold text-accent">{pending.length}</span>
+      <span class="text-sm font-medium text-foreground/60">Pending Applications</span>
+    </div>
+    <div class="flex items-center gap-3 px-5 py-3 bg-white rounded-xl border border-primary/20 shadow-sm">
+      <span class="text-3xl font-extrabold text-accent">{sortedGroups.length}</span>
+      <span class="text-sm font-medium text-foreground/60">Technology Areas</span>
+    </div>
+  </div>
+
+  <!-- Granted Patents by Topic -->
+  <section class="mb-16">
+    <h2 class="text-2xl font-bold text-secondary mb-6">Granted Patents</h2>
+    <div class="space-y-4">
+      {sortedGroups.map(([topicKey, { label, patents }]) => (
+        <details class="group rounded-xl border border-primary/20 bg-white shadow-sm">
+          <summary class="flex items-center justify-between cursor-pointer px-6 py-4 hover:bg-primary/5 rounded-xl transition-colors">
+            <div class="flex items-center gap-3">
+              <h3 class="font-bold text-secondary">{label}</h3>
+              <Badge>{patents.length} {patents.length === 1 ? 'patent' : 'patents'}</Badge>
+            </div>
+            <svg class="w-5 h-5 text-foreground/40 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-4 space-y-3 border-t border-primary/10 pt-4">
+            {patents
+              .sort((a, b) => (b.data.granted || '').localeCompare(a.data.granted || ''))
+              .map((patent) => (
+              <div class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 py-2">
+                <a
+                  href={`https://patents.google.com/patent/US${patent.data.number}`}
+                  target="_blank"
+                  rel="noopener"
+                  class="shrink-0 text-sm font-mono text-accent hover:underline"
+                >
+                  US{patent.data.number}
+                </a>
+                <div class="flex-1">
+                  <p class="text-sm font-medium text-foreground/80">{patent.data.title}</p>
+                  <p class="text-xs text-foreground/50 mt-0.5">
+                    {patent.data.granted && `Granted ${patent.data.granted}`}
+                    {patent.data.assignee && ` · ${patent.data.assignee}`}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- Pending Applications -->
+  <section>
+    <h2 class="text-2xl font-bold text-secondary mb-2">Pending Applications</h2>
+    <p class="text-foreground/60 mb-6">
+      The new frontier — blockchain settlement, decentralized telecom, and MVNO economics.
+    </p>
+    <div class="space-y-3">
+      {pending
+        .sort((a, b) => (b.data.published || '').localeCompare(a.data.published || ''))
+        .map((patent) => (
+        <div class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 p-4 rounded-xl border border-accent/20 bg-accent/5">
+          <a
+            href={`https://patents.google.com/patent/US${patent.data.number}`}
+            target="_blank"
+            rel="noopener"
+            class="shrink-0 text-sm font-mono text-accent hover:underline"
+          >
+            US{patent.data.number}
+          </a>
+          <div class="flex-1">
+            <p class="text-sm font-medium text-foreground/80">{patent.data.title}</p>
+            <p class="text-xs text-foreground/50 mt-0.5">
+              Filed {patent.data.filed}
+              {patent.data.published && ` · Published ${patent.data.published}`}
+            </p>
+          </div>
+          <Badge variant="accent">Pending</Badge>
+        </div>
+      ))}
+    </div>
+  </section>
+</PageLayout>

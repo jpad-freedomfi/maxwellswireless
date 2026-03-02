@@ -1,0 +1,99 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import TimelineItem from '../components/TimelineItem.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import SkillGrid from '../components/SkillGrid.astro';
+import Badge from '../components/Badge.astro';
+import career from '../data/career.json';
+import publications from '../data/publications.json';
+import skills from '../data/skills.json';
+---
+
+<PageLayout
+  title="Experience"
+  description="Joey Padden's 20+ year career in wireless — from RF engineering to founding FreedomFi to leading network architecture at Helium."
+  heading="Experience"
+  subheading="20+ years of building, from signals to systems to startups."
+>
+  <!-- Timeline -->
+  <section class="mb-20">
+    <SectionHeading title="Career" />
+    <div class="mt-8">
+      {career.map((role) => (
+        <TimelineItem
+          period={role.period}
+          role={role.role}
+          company={role.company}
+          description={role.description}
+          highlights={role.highlights}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="mb-20">
+    <SectionHeading title="Skills & Expertise" />
+    <div class="mt-8">
+      <SkillGrid skills={skills} />
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="mb-20">
+    <SectionHeading title="Certifications" />
+    <div class="mt-6">
+      <div class="flex items-center gap-3">
+        <Badge variant="accent">Certified</Badge>
+        <span class="font-medium text-foreground/80">Google CBRS CPI Certification</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section class="mb-20">
+    <SectionHeading title="Publications & Research" />
+    <div class="mt-8 space-y-4">
+      {publications.map((pub) => (
+        <div class="flex items-start gap-4 p-4 rounded-lg border border-primary/15 bg-white">
+          <div class="shrink-0">
+            <Badge variant={pub.type === "Master's Thesis" ? 'accent' : 'default'}>{pub.type}</Badge>
+          </div>
+          <div>
+            <h4 class="font-semibold text-secondary">{pub.title}</h4>
+            <p class="text-sm text-foreground/50 mt-1">
+              {pub.venue && <span>{pub.venue}</span>}
+              {pub.venue && pub.year && <span> &middot; </span>}
+              {pub.year && <span>{pub.year}</span>}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Standards Work -->
+  <section class="mb-20">
+    <SectionHeading title="Standards Body Work" />
+    <p class="mt-4 text-foreground/70 leading-relaxed max-w-3xl">
+      Active contributor and delegate across major wireless and telecom standards bodies.
+      Held leadership roles in WBA and other industry groups.
+    </p>
+    <div class="mt-6 flex flex-wrap gap-3">
+      {['3GPP', 'Wi-Fi Alliance (WFA)', 'Wireless Broadband Alliance (WBA)', 'Telecom Infra Project (TIP)', 'O-RAN Alliance', 'DOCSIS/SCTE'].map((org) => (
+        <span class="px-4 py-2 bg-white border border-primary/20 rounded-lg text-sm font-medium text-secondary">
+          {org}
+        </span>
+      ))}
+    </div>
+  </section>
+
+  <!-- Speaking -->
+  <section>
+    <SectionHeading title="Speaking" />
+    <p class="mt-4 text-foreground/70 leading-relaxed max-w-3xl">
+      Regular speaker at industry events including WBA Wireless Global Congress,
+      Network X Americas, SCTE, and others.
+    </p>
+  </section>
+</PageLayout>

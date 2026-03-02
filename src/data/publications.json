@@ -1,0 +1,50 @@
+[
+  {
+    "title": "User Based Quality of Service for 802.11 Networks",
+    "type": "Master's Thesis",
+    "venue": "University of Colorado",
+    "year": null
+  },
+  {
+    "title": "The March to Budget-Friendly vRAN Continues!",
+    "type": "Publication",
+    "venue": "CableLabs",
+    "year": 2019
+  },
+  {
+    "title": "CoMP over DOCSIS: Femtocells in the Age of vRAN",
+    "type": "Publication",
+    "venue": "CableLabs",
+    "year": 2019
+  },
+  {
+    "title": "LTE vs. Wi-Fi Simulations",
+    "type": "Publication",
+    "venue": null,
+    "year": 2016
+  },
+  {
+    "title": "Wi-Fi — Too Important To Fail",
+    "type": "Publication",
+    "venue": null,
+    "year": 2016
+  },
+  {
+    "title": "Community Wi-Fi Networks",
+    "type": "Publication",
+    "venue": "SCTE",
+    "year": 2014
+  },
+  {
+    "title": "Preliminary Study of CoDel AQM in a DOCSIS Network",
+    "type": "Publication",
+    "venue": "CableLabs",
+    "year": 2012
+  },
+  {
+    "title": "Community WiFi: Network Efficiency and The Need for QOS",
+    "type": "Publication",
+    "venue": null,
+    "year": 2012
+  }
+]

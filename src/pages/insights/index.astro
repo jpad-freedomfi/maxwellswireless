@@ -1,0 +1,32 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('insights'))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+
+<PageLayout
+  title="Insights"
+  description="Thoughts on wireless, telecom, AI, and building — from Joey Padden."
+  heading="Insights"
+  subheading="Thoughts on wireless, telecom, AI, and the craft of building."
+>
+  {posts.length > 0 ? (
+    <div class="grid md:grid-cols-2 gap-6">
+      {posts.map((post) => (
+        <PostCard
+          title={post.data.title}
+          description={post.data.description}
+          date={post.data.date}
+          slug={post.id}
+          tags={post.data.tags}
+        />
+      ))}
+    </div>
+  ) : (
+    <p class="text-foreground/60 text-lg">Posts coming soon. Check back!</p>
+  )}
+</PageLayout>

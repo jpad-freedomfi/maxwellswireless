@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+---
+
+<BaseLayout title="Maxwell's Wireless — Joey Padden" description="Joey Padden — Engineer, founder, 50 U.S. patents, and architect of what's next in wireless. From FreedomFi to Helium to AI + telecom.">
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="max-w-content mx-auto px-6 py-20 md:py-32">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 text-center md:text-left">
+          <img src="/images/logo-vertical.png" alt="Maxwell's Wireless" class="h-24 mx-auto md:mx-0 mb-6" />
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary leading-tight">
+            Engineer. Founder.<br />
+            <span class="text-accent">Architect of what's next in wireless.</span>
+          </h1>
+          <p class="mt-6 text-lg text-foreground/70 max-w-xl mx-auto md:mx-0">
+            I'm Joey Padden — 20+ years in wireless, 50 U.S. patents, a startup exit,
+            and a current role building the future of decentralized telecom at Helium.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <Button href="/about">Learn My Story</Button>
+            <Button href="/contact" variant="outline">Let's Connect</Button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Decorative gradient -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-transparent to-accent/5" />
+  </section>
+
+  <!-- Quick Intro -->
+  <section class="bg-white border-y border-primary/10">
+    <div class="max-w-content mx-auto px-6 py-16">
+      <p class="text-xl md:text-2xl text-foreground/80 leading-relaxed max-w-3xl mx-auto text-center">
+        I started by understanding signals. Then I learned to build systems around them.
+        Then teams. Then companies. Now I'm writing code — because when AI tools arrived,
+        I realized I could build the things I envision without depending on a software team.
+      </p>
+    </div>
+  </section>
+
+  <!-- Highlight Cards -->
+  <section class="max-w-content mx-auto px-6 py-20">
+    <SectionHeading title="What I Bring" centered />
+    <div class="grid md:grid-cols-3 gap-6 mt-8">
+      <Card href="/experience">
+        <div class="text-accent text-3xl mb-4">&#9670;</div>
+        <h3 class="text-xl font-bold text-secondary mb-2">20+ Years of Wireless</h3>
+        <p class="text-foreground/60">
+          From RF engineering and signal processing through network architecture,
+          standards leadership, and executive roles. Deep expertise across the
+          entire wireless stack.
+        </p>
+      </Card>
+      <Card href="/projects">
+        <div class="text-accent text-3xl mb-4">&#9670;</div>
+        <h3 class="text-xl font-bold text-secondary mb-2">Builder & Founder</h3>
+        <p class="text-foreground/60">
+          Co-founded FreedomFi (acquired 2022). Launched the Helium Mobile MVNO.
+          Built a Wi-Fi offload network serving 3.5M+ daily users. Now exploring
+          AI + telecom.
+        </p>
+      </Card>
+      <Card href="/patents">
+        <div class="text-accent text-3xl mb-4">&#9670;</div>
+        <h3 class="text-xl font-bold text-secondary mb-2">50 U.S. Patents</h3>
+        <p class="text-foreground/60">
+          A body of work spanning MIMO, vRAN, CoMP, traffic prioritization,
+          spectrum coexistence, and now blockchain-telecom convergence.
+          Plus 5 more pending.
+        </p>
+      </Card>
+    </div>
+  </section>
+
+</BaseLayout>

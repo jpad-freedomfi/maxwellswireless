@@ -9,19 +9,25 @@ import Button from '../components/Button.astro';
   heading="About"
   subheading="The story behind two decades of building in wireless."
 >
-  <div class="prose prose-lg max-w-none">
-    <p>
+  <div class="flex flex-col md:flex-row gap-10 mb-12 items-start">
+    <img
+      src="/images/headshot.jpg"
+      alt="Joey Padden"
+      class="w-48 h-48 rounded-2xl object-cover border-2 border-primary/20 shadow-md shrink-0 mx-auto md:mx-0"
+    />
+    <p class="text-lg text-foreground/80 leading-relaxed">
       I've spent 20+ years in wireless, from grad school research on WiFi QoS to
       co-founding FreedomFi, the company that brought CBRS small cells to the
-      Helium network. It was acquired by Nova Labs in 2022.
+      Helium network. It was acquired by Nova Labs in 2022. Along the way, I've been
+      granted 50 U.S. patents, led 3GPP standardization at CableLabs, and helped
+      build the Helium network from the inside as VP of Network Architecture.
     </p>
+  </div>
 
+  <div class="prose prose-lg max-w-none">
     <p>
-      Along the way, I've been granted 50 U.S. patents, led 3GPP standardization at
-      CableLabs, and helped build the Helium network from the inside as VP of
-      Network Architecture. I've published research, spoken at industry conferences
-      around the world, and contributed to standards bodies that shape how wireless
-      networks work.
+      I've published research, spoken at industry conferences around the world, and
+      contributed to standards bodies that shape how wireless networks work.
     </p>
 
     <h2>What Drives Me</h2>

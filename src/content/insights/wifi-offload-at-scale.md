@@ -9,7 +9,7 @@ Carrier Wi-Fi offload has been "the next big thing" for over a decade. Everyone 
 
 At Helium, we took a decentralized Wi-Fi network from zero to 3.5 million daily unique users in about eighteen months. That number keeps growing. And it forced us to confront every hard problem that the traditional offload playbook skips over.
 
-The biggest one: quality. It's easy to offload subscribers to Wi-Fi. It's hard to offload them to Wi-Fi that actually delivers a good experience. Most carrier offload schemes treat any open access point as a valid target. The subscriber connects, the session counts as "offloaded," and everyone pats themselves on the back. Meanwhile the user is stuck on a congested residential AP wondering why their phone suddenly can't load a webpage.
+The biggest one: quality. It's easy to offload subscribers to Wi-Fi. It's hard to offload them to Wi-Fi that actually delivers a good experience. Most carrier offload schemes treat any open access point as a valid target. The subscriber connects, the session counts as "offloaded," and everyone pats themselves on the back. Meanwhile the user is stuck on a congested AP wondering why their phone suddenly can't load a webpage.
 
 That's the problem I've been working on with the WBA (the Wireless Broadband Alliance). We've been building a framework for quality-driven offload. The idea is straightforward: instrument the Wi-Fi network with real performance metrics, feed those metrics back to the subscriber's parent operator (the MNO or MVNO), and let the operator make an informed decision about whether to connect or reject a given access point.
 

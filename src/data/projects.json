@@ -2,7 +2,7 @@
   {
     "title": "FreedomFi",
     "period": "2019 - 2022 (Acquired)",
-    "description": "Co-founded the company that brought CBRS private cellular to the Helium network. Built open-source small cell infrastructure that bridged traditional telecom with blockchain-based incentive models. Acquired by Nova Labs in 2022.",
+    "description": "Co-founded the company that brought CBRS and Wi-Fi to the Helium network. Built open-source small cell infrastructure that bridged traditional telecom with blockchain-based incentive models. Acquired by Nova Labs in 2022.",
     "tags": ["CBRS", "Small Cells", "Open Source", "Blockchain", "Startup", "Acquisition"]
   },
   {
@@ -14,19 +14,19 @@
   {
     "title": "Helium Mobile MVNO",
     "period": "2022 - Present",
-    "description": "Led the launch of the Helium Mobile MVNO from day one. Negotiated the original T-Mobile wholesale contract. Planned and led the build of the entire MVNO backend: customer management platform, SIM/eSIM provisioning, inventory management, fraud analysis and prevention, cost optimization, and regulatory compliance. Led integration with the T-Mobile wholesale telco core.",
-    "tags": ["MVNO", "T-Mobile", "eSIM", "Fraud Prevention", "Cost Optimization"]
+    "description": "Led the launch of the Helium Mobile MVNO from day one. Negotiated the original T-Mobile wholesale contract. Planned and led the technical team building the entire MVNO backend: customer management platform, SIM/eSIM provisioning, inventory management, fraud analysis and prevention, cost optimization, and regulatory compliance. Led integration with the T-Mobile wholesale telco core including a novel roaming architecture for CBRS.",
+    "tags": ["MVNO", "T-Mobile", "eSIM", "Cellular Roaming", "Cost Optimization"]
   },
   {
     "title": "VoiceMail App",
     "period": "2024 - Present",
-    "description": "An iOS app born from a real need. My dad is losing his eyesight, and every voice-reader email app has terrible UX. Building something he can actually use. Also a deliberate move to stay hands-on with AI coding tools, because the best way to understand them is to build something real.",
+    "description": "An iOS app born from a real need. My dad is losing his eyesight, and every available voice-reader email app has a terrible UX. Building something he can actually use. Also a deliberate move to stay hands-on with AI coding tools, because the best way to understand them is to build something real.",
     "tags": ["iOS", "Swift", "AI-Assisted Development", "Accessibility"]
   },
   {
     "title": "CableLabs Research",
     "period": "2010 - 2019",
-    "description": "Foundational contributions to the wireless and cable industries: vRAN architecture, CoMP over DOCSIS, LTE/WiFi coexistence studies, FEC study for DOCSIS 3.1, CoDel active queue management. Published research and granted 45+ patents during this period.",
+    "description": "Foundational contributions to the wireless and cable industries: vRAN architecture, LTE/5G over DOCSIS, LTE/WiFi coexistence studies, FEC study for DOCSIS 3.1, CoDel active queue management. Published research and granted 45+ patents during this period.",
     "tags": ["vRAN", "CoMP", "DOCSIS 3.1", "LTE/WiFi", "FEC", "Research"]
   },
   {

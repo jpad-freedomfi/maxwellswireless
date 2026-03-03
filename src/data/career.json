@@ -8,7 +8,7 @@
       "Built Wi-Fi offload network from 0 to 3.5M+ daily users in 18 months",
       "Led MVNO backend build: customer management, SIM/eSIM provisioning, inventory, fraud detection, cost optimization, regulatory compliance",
       "Leading WBA project to reshape carrier offload with tier-1 US carriers",
-      "Building Claude-friendly MCP interfaces for AI-driven network analysis",
+      "Building AI-friendly MCP interfaces for AI-driven network analysis",
       "5 new patent applications filed on blockchain-telecom convergence"
     ]
   },
@@ -16,7 +16,7 @@
     "period": "2019 - 2022",
     "role": "Co-Founder & CTO",
     "company": "FreedomFi",
-    "description": "Co-founded the company that brought CBRS small cells to the Helium network via open-source private cellular infrastructure. Acquired by Nova Labs in 2022.",
+    "description": "Co-founded the company that brought CBRS and Wi-Fi to the Helium network via open-source private cellular infrastructure. Acquired by Nova Labs in 2022.",
     "highlights": [
       "Built the company from concept to acquisition",
       "Developed open-source CBRS small cell platform",
@@ -25,7 +25,7 @@
     ]
   },
   {
-    "period": "2010 - 2019",
+    "period": "2010 - 2015, 2017 - 2019",
     "role": "Distinguished Technologist & Director of 3GPP Standardization",
     "company": "CableLabs",
     "description": "Published researcher and standards body leader. Drove innovation in vRAN, CoMP, LTE/WiFi coexistence, and DOCSIS network optimization. Led standardization work across 3GPP, WFA, WBA, TIP, O-RAN, and DOCSIS/SCTE.",
@@ -33,11 +33,12 @@
       "Granted 45+ U.S. patents during tenure",
       "Published research on vRAN, CoMP over DOCSIS, CoDel AQM, WiFi coexistence",
       "Led 3GPP standardization delegation",
-      "Active contributor and leadership roles in WBA, WFA, TIP, O-RAN Alliance"
+      "Active contributor and leadership roles in WBA, WFA, TIP, O-RAN Alliance",
+      "Held various positions, culminating in Distinguished Technologist & Director of 3GPP Standardization"
     ]
   },
   {
-    "period": "Earlier",
+    "period": "2015 - 2017",
     "role": "Network Architect",
     "company": "Layer3 TV",
     "description": "Built an all-IP linear video + VOD cable TV-like service provider. Led set-top box HW/SW development (chip selection with Broadcom, ODM negotiation, integration, and deployment). Full video headend from satellite feeds through encoding, ABR packaging, and Wi-Fi-based IP set-top boxes with QoS.",

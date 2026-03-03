@@ -1,9 +1,9 @@
 [
   {
-    "period": "2022 — Present",
+    "period": "2022 - Present",
     "role": "VP, Network Architecture",
     "company": "Helium / Nova Labs",
-    "description": "Leading the team building software and hardware for decentralized telecom infrastructure. Integral in launching the Helium Mobile MVNO — negotiated the original T-Mobile contract, planned and led the build of MVNO backend systems, and led integration with the T-Mobile wholesale telco core.",
+    "description": "Leading the team building software and hardware for decentralized telecom infrastructure. Integral in launching the Helium Mobile MVNO: negotiated the original T-Mobile contract, planned and led the build of MVNO backend systems, and led integration with the T-Mobile wholesale telco core.",
     "highlights": [
       "Built Wi-Fi offload network from 0 to 3.5M+ daily users in 18 months",
       "Led MVNO backend build: customer management, SIM/eSIM provisioning, inventory, fraud detection, cost optimization, regulatory compliance",
@@ -13,7 +13,7 @@
     ]
   },
   {
-    "period": "2019 — 2022",
+    "period": "2019 - 2022",
     "role": "Co-Founder & CTO",
     "company": "FreedomFi",
     "description": "Co-founded the company that brought CBRS small cells to the Helium network via open-source private cellular infrastructure. Acquired by Nova Labs in 2022.",
@@ -25,7 +25,7 @@
     ]
   },
   {
-    "period": "2010 — 2019",
+    "period": "2010 - 2019",
     "role": "Distinguished Technologist & Director of 3GPP Standardization",
     "company": "CableLabs",
     "description": "Published researcher and standards body leader. Drove innovation in vRAN, CoMP, LTE/WiFi coexistence, and DOCSIS network optimization. Led standardization work across 3GPP, WFA, WBA, TIP, O-RAN, and DOCSIS/SCTE.",
@@ -40,7 +40,7 @@
     "period": "Earlier",
     "role": "Network Architect",
     "company": "Layer3 TV",
-    "description": "Built an all-IP linear video + VOD cable TV-like service provider. Led set-top box HW/SW development — chip selection with Broadcom, ODM negotiation, integration, and deployment. Full video headend from satellite feeds through encoding, ABR packaging, and Wi-Fi-based IP set-top boxes with QoS.",
+    "description": "Built an all-IP linear video + VOD cable TV-like service provider. Led set-top box HW/SW development (chip selection with Broadcom, ODM negotiation, integration, and deployment). Full video headend from satellite feeds through encoding, ABR packaging, and Wi-Fi-based IP set-top boxes with QoS.",
     "highlights": [
       "Led set-top box development from chip selection to deployment",
       "Built full video headend: satellite feeds → encoding → ABR packaging → delivery",
